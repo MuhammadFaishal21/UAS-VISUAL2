@@ -1,0 +1,40 @@
+object Form3: TForm3
+  Left = 284
+  Top = 293
+  Width = 928
+  Height = 480
+  Caption = 'Form3'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object dbgrd1: TDBGrid
+    Left = 4
+    Top = 32
+    Width = 761
+    Height = 157
+    TabOrder = 0
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+  object dbgrd2: TDBGrid
+    Left = 4
+    Top = 200
+    Width = 761
+    Height = 157
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
+end
