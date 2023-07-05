@@ -743,7 +743,6 @@ object Form5: TForm5
   end
   object zqry2: TZQuery
     Connection = con1
-    Active = True
     SQL.Strings = (
       'select * from wali_kelas')
     Params = <>

@@ -60,6 +60,7 @@ type
 
 var
   Form5: TForm5;
+  id:string;
 
 implementation
 
