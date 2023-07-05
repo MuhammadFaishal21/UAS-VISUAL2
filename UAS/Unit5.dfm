@@ -1,9 +1,9 @@
-object Form4: TForm4
-  Left = 248
-  Top = 128
+object Form5: TForm5
+  Left = 192
+  Top = 125
   Width = 928
   Height = 480
-  Caption = 'Form4'
+  Caption = 'Form5'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -22,9 +22,9 @@ object Form4: TForm4
   object l1: TLabel
     Left = 4
     Top = 12
-    Width = 117
+    Width = 114
     Height = 15
-    Caption = 'NAMA WALI KELAS'
+    Caption = 'NAMA ORANG TUA'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -33,7 +33,7 @@ object Form4: TForm4
     ParentFont = False
   end
   object l3: TLabel
-    Left = 300
+    Left = 324
     Top = 12
     Width = 109
     Height = 16
@@ -46,7 +46,7 @@ object Form4: TForm4
     ParentFont = False
   end
   object l6: TLabel
-    Left = 628
+    Left = 664
     Top = 12
     Width = 29
     Height = 16
@@ -72,11 +72,11 @@ object Form4: TForm4
     ParentFont = False
   end
   object l5: TLabel
-    Left = 588
-    Top = 40
-    Width = 79
+    Left = 628
+    Top = 44
+    Width = 73
     Height = 16
-    Caption = 'WALI KELAS'
+    Caption = 'PEKERJAAN'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -87,9 +87,9 @@ object Form4: TForm4
   object l7: TLabel
     Left = 4
     Top = 76
-    Width = 94
+    Width = 98
     Height = 16
-    Caption = 'JENIS KELAMIN'
+    Caption = 'NIK/NOMORKTP'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -98,11 +98,37 @@ object Form4: TForm4
     ParentFont = False
   end
   object l10: TLabel
-    Left = 324
+    Left = 316
     Top = 48
-    Width = 47
+    Width = 124
     Height = 15
-    Caption = 'STATUS'
+    Caption = 'STATUS PEKERJAAN'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object l8: TLabel
+    Left = 320
+    Top = 76
+    Width = 53
+    Height = 15
+    Caption = 'ALAMAT'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -13
+    Font.Name = 'Times New Roman'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object l9: TLabel
+    Left = 576
+    Top = 72
+    Width = 124
+    Height = 15
+    Caption = 'STATUS ORANG TUA'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
     Font.Height = -13
@@ -172,7 +198,7 @@ object Form4: TForm4
     TabOrder = 6
   end
   object e_2: TEdit
-    Left = 668
+    Left = 716
     Top = 8
     Width = 169
     Height = 21
@@ -186,14 +212,14 @@ object Form4: TForm4
     TabOrder = 8
   end
   object e_4: TEdit
-    Left = 668
+    Left = 720
     Top = 40
     Width = 169
     Height = 21
     TabOrder = 9
   end
   object dtp1: TDateTimePicker
-    Left = 412
+    Left = 444
     Top = 8
     Width = 153
     Height = 21
@@ -202,42 +228,107 @@ object Form4: TForm4
     TabOrder = 10
   end
   object cbb1: TComboBox
-    Left = 412
-    Top = 40
+    Left = 448
+    Top = 44
     Width = 153
     Height = 21
     ItemHeight = 13
     TabOrder = 11
     Text = '---PILIH STATUS---'
     Items.Strings = (
-      'MENIKAH'
-      'BELUM MENIKAH')
+      'AKTIF'
+      'NON AKTIF')
   end
   object cbb2: TComboBox
-    Left = 132
-    Top = 72
+    Left = 724
+    Top = 68
     Width = 161
     Height = 21
     ItemHeight = 13
     TabOrder = 12
-    Text = '---PILIH JENIS KELAMIN---'
+    Text = '---PILIH STATUS---'
     Items.Strings = (
-      'LAKI-LAKI'
-      'PEREMPUAN')
+      'KANDUNG'
+      'TIRI')
+  end
+  object e_5: TEdit
+    Left = 128
+    Top = 72
+    Width = 169
+    Height = 21
+    TabOrder = 13
+  end
+  object e_6: TEdit
+    Left = 384
+    Top = 72
+    Width = 169
+    Height = 21
+    TabOrder = 14
   end
   object dbgrd1: TDBGrid
     Left = 0
-    Top = 100
-    Width = 829
-    Height = 317
+    Top = 96
+    Width = 825
+    Height = 329
     DataSource = ds1
-    TabOrder = 13
+    TabOrder = 15
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
     OnCellClick = dbgrd1CellClick
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'Id_orgtua'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nama_orangtua'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Tanggal_lahir'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Telp'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Pendidikan_terakhir'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Status_pekerjaan'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Pekerjaan'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Nik_nomorKTP'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Alamat_orgtua'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'Status_orgtua'
+        Visible = True
+      end>
   end
   object con1: TZConnection
     ControlsCodePage = cGET_ACP
@@ -249,7 +340,7 @@ object Form4: TForm4
     Database = 'db_sekolah'
     User = 'root'
     Protocol = 'mysql'
-    LibraryLocation = 'D:\UAS\libmysql.dll'
+    LibraryLocation = 'D:\test\libmysql.dll'
     Left = 432
     Top = 372
   end
@@ -257,7 +348,7 @@ object Form4: TForm4
     Connection = con1
     Active = True
     SQL.Strings = (
-      'select * from wali_kelas'
+      'select * from orang_tua'
       ''
       '')
     Params = <>
@@ -286,7 +377,7 @@ object Form4: TForm4
     PrintOptions.Printer = 'Default'
     PrintOptions.PrintOnSheet = 0
     ReportOptions.CreateDate = 45097.373740509300000000
-    ReportOptions.LastChange = 45111.333807199070000000
+    ReportOptions.LastChange = 45112.389504317130000000
     ScriptLanguage = 'PascalScript'
     ScriptText.Strings = (
       'begin'
@@ -319,7 +410,7 @@ object Form4: TForm4
         Top = 18.897650000000000000
         Width = 1046.929810000000000000
         object Memo13: TfrxMemoView
-          Left = 374.173470000000000000
+          Left = 472.441250000000000000
           Width = 336.378170000000000000
           Height = 41.574830000000000000
           ShowHint = False
@@ -331,7 +422,7 @@ object Form4: TForm4
           Frame.Typ = [ftLeft, ftRight, ftTop, ftBottom]
           HAlign = haCenter
           Memo.UTF8 = (
-            'LAPORAN DATA WALI KELAS')
+            'LAPORAN DATA ORANG TUA')
           ParentFont = False
           VAlign = vaCenter
         end
