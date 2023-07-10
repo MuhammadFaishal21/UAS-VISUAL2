@@ -128,7 +128,7 @@ end else
 begin
  ShowMessage('DATA BERHASIL DIUPDATE!');
 zqry1.SQL.Clear;
-zqry1.SQL.Add('Update wali_kelas set Semester= "'+e_1.Text+'",Id_siswa="'+e_2.Text+'",Id_walikelas="'+e_3.Text+'",Id_orgtua="'+e_4.Text+'",Id_poin="'+e_5.Text+'" where Id_catatan="'+Id+'"');
+zqry1.SQL.Add('Update catatan set Semester= "'+e_1.Text+'",Id_siswa="'+e_2.Text+'",Id_walikelas="'+e_3.Text+'",Id_orgtua="'+e_4.Text+'",Id_poin="'+e_5.Text+'" where Id_catatan="'+Id+'"');
 zqry1. ExecSQL;
 
 zqry1.SQL.Clear;

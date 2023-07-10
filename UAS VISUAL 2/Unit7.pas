@@ -120,7 +120,7 @@ end else
 begin
  ShowMessage('DATA BERHASIL DIUPDATE!');
 zqry1.SQL.Clear;
-zqry1.SQL.Add('Update hubungan set Id_siswa= "'+e_1.Text+'",Id_orgtua="'+e_2.Text+'" where Id_user="'+Id+'"');
+zqry1.SQL.Add('Update hubungan set Id_siswa= "'+e_1.Text+'",Id_orgtua="'+e_2.Text+'" where Id_hubungan="'+Id+'"');
 zqry1. ExecSQL;
 
 zqry1.SQL.Clear;
@@ -136,7 +136,7 @@ begin
 if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
 begin
 zqry1.SQL.Clear;
-zqry1.SQL.Add(' delete from user where Id_hubungan="'+Id+'"');
+zqry1.SQL.Add(' delete from hubungan where Id_hubungan="'+Id+'"');
 zqry1. ExecSQL;
 zqry1.SQL.Clear;
 zqry1.SQL.Add('select * from hubungan');
